@@ -21,9 +21,9 @@ class Clock extends React.Component {
   render() {
     return (
       <p>
-        {this.state.date.toLocaleString("en-GB", {
+        {`${this.props.timeZone}: ${this.state.date.toLocaleString("en-GB", {
           timeZone: this.props.timeZone,
-        })}
+        })}`}
       </p>
     );
   }
