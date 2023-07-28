@@ -17,3 +17,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.Flag {
+  height: 25vh;
+  width: 20vw;
+}

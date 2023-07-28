@@ -1,35 +1,41 @@
 import React from "react";
-import logo from "./logo.png";
 import "./App.css";
 import Clock from "./Clock.js";
+import { Container, Row, Col } from "react-bootstrap";
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { date: new Date() };
-  // }
-
-  // tick() {
-  //   this.setState({
-  //     date: new Date(),
-  //   });
-  // }
-
-  // componentDidMount() {
-  //   this.timerID = setInterval(() => this.tick(), 1000);
-  // }
-
-  // componentWillUnmount() {
-  //   clearInterval(this.timerID);
-  // }
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {/* <p>{this.state.date.toLocaleTimeString()}</p> */}
-          <Clock timeZone="Asia/Singapore" />
+          <Container>
+            <Row>
+              <Col>
+                <img
+                  className="Flag"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/800px-Flag_of_Singapore.svg.png"
+                  alt="Singapore Flag"
+                />
+                <Clock timeZone="Asia/Singapore" />
+              </Col>
+              <Col>
+                <img
+                  className="Flag"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_New_York.svg/800px-Flag_of_New_York.svg.png"
+                  alt="New York Flag"
+                />
+                <Clock timeZone="America/New_York" />
+              </Col>
+              <Col>
+                <img
+                  className="Flag"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_the_City_of_London.svg/500px-Flag_of_the_City_of_London.svg.png"
+                  alt="London Flag"
+                />
+                <Clock timeZone="Europe/London" />
+              </Col>
+            </Row>
+          </Container>
         </header>
       </div>
     );
